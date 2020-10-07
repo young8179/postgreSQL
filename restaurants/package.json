@@ -1,0 +1,17 @@
+{
+  "name": "restaurants",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "createdb restaurants",
+    "db:destroy": "dropdb restaurants",
+    "db:init": "psql -f schema.sql restaurants",
+    "db:seed": "psql -f seed.sql restaurants",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
